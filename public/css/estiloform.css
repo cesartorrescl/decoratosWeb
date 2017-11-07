@@ -1,0 +1,146 @@
+/* General Styles */
+
+* {
+   box-sizing:border-box;
+   -webkit-box-sizing:border-box;
+   -moz-box-sizing:border-box;
+   -webkit-font-smoothing:antialiased;
+   -moz-font-smoothing:antialiased;
+   -o-font-smoothing:antialiased;
+   font-smoothing:antialiased;
+   text-rendering:optimizeLegibility;
+   margin:0;
+   padding: 0;
+}
+body, html {
+   color: #FBFBEF;
+   font-family: Arial, san-serif;
+   height: 100%;
+   width: 100%;
+}
+
+
+/* Contact Form Styles */
+h1 {
+   margin: 10px 0 0 0;
+}
+h4{
+   margin: 0 0 20px 0;
+}
+
+div#inventario{
+   width: 100%;
+   padding: 0px 0 30px;
+   overflow: hidden;
+
+}
+
+button.linkboton{
+    background-color: #DF7401; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+}
+
+div.fondo{
+   background:url(fondo.jpg) no-repeat;
+   background-size: cover;
+   height:100%;
+   background-color: #DF7401;
+   position: fixed;
+   width: 100%;
+   z-index: -5;
+}
+#decoratos-form {
+   background-color: rgba(230, 150, 100, 0.6);
+   padding: 10px 20px 30px 20px;
+   border-color: black;
+   float: left;
+   margin: 100px 5%;
+   border-radius:7px;
+   width: 30%;
+   -webkit-border-radius:7px;
+   -moz-border-radius:7px;
+   
+}
+
+@media (max-width:800px){
+   #decoratos-form{
+      width: 90%;
+      margin-top: 80px;
+   }
+}
+#decoratos-form input,   
+#decoratos-form select,   
+#decoratos-form textarea,   
+#decoratos-form label { 
+   font-size: 15px;  
+   margin-bottom: 2px;
+   font-family: Arial, san-serif;
+} 
+#decoratos-form input,   
+#decoratos-form select,   
+#decoratos-form textarea { 
+   width:100%;
+   background: #fff;
+   border: 0; 
+   -moz-border-radius: 4px;  
+   -webkit-border-radius: 4px;  
+   border-radius: 4px;
+   margin-bottom: 25px;  
+   padding: 5px;  
+}  
+#decoratos-form input:focus,   
+#decoratos-form select:focus,   
+#decoratos-form textarea:focus {  
+   background-color: #E5E6E7; 
+}  
+#decoratos-form textarea {
+   width:100%;
+    height: 15inventario}
+#decoratos-form button[type="submit"] {
+   cursor:pointer;
+   width:100%;
+   border:none;
+   background:#EB6421;
+   background-image:linear-gradient(bottom, #FF8548 0%, #EB6421 52%);
+   background-image:-moz-linear-gradient(bottom,  0%, #EB6421 52%);
+   background-image:-webkit-linear-gradient(bottom, #FF8548 0%, #EB6421 52%);
+   color:#FFF;
+   margin:0 0 5px;
+   padding:10px;
+   border-radius:20px;
+}
+
+#decoratos-form button[type="submit"]:hover {
+   background-image:-webkit-linear-gradient(bottom, #FF8548 0%, #EB6421 52%);gradient(bottom, #FF8548 0%, #EB6421 52%);
+   -webkit-transition:background 0.3s ease-in-out;
+   -moz-transition:background 0.3s ease-in-out;
+   transition:background-color 0.3s ease-in-out;
+}
+#decoratos-form button[type="submit"]:active {
+   box-shadow:inset 0 1px 3px rgba(0,0,0,0.5);
+}
+
+input:required, textarea:required {  
+   box-shadow: none;
+   -moz-box-shadow: none;  
+   -webkit-box-shadow: none;  
+   -o-box-shadow: none;  
+} 
+#decoratos-form .required {  
+   font-weight:bold;  
+   color: #E5E6E7;      
+}
+
+/* Hide success/failure message
+   (especially since the php is missing) */
+#failure, #success {
+   color: #6EA070; 
+   display:none;  
+}
+

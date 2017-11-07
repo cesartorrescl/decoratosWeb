@@ -1,0 +1,547 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3,
+h4, h5, h6, p, blockquote, pre, a, abbr, acronym,
+address, big, cite, code, del, dfn, em, font, img, ins,
+kbd, q, s, samp, small, strike, strong, sub, sup, tt,
+var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+font-weight: inherit;
+font-style: inherit;
+font-size: 100%;
+font-family: sans-serif;
+vertical-align: baseline;
+}
+
+:focus { outline: 0;}
+
+a, a:link, a:visited, a:hover, a:active{text-decoration:none}
+table { border-collapse: separate;border-spacing: 0;}
+th, td {text-align: left; font-weight: normal;}
+img, iframe {border: none; text-decoration:none;}
+ol, ul {list-style: none;}
+input, textarea, select, button {font-size: 100%;font-family: inherit;}
+select {margin: inherit;}
+hr {margin: 0;padding: 0;border: 0;color: #000;background-color: #000;height: 1px}
+
+/*font-family: 'Josefin Sans', sans-serif;*/
+/*font-family: 'Fjalla One', sans-serif;*/
+/*font-family: 'Open Sans', sans-serif;*/
+/*font-family: 'Roboto', sans-serif;*/
+
+
+::placeholder{
+    color: #FF742E;
+}
+
+header{
+    width: 90%;
+    margin: 0 auto;
+    height: 40px;
+    padding: 20px 5%;
+    background-color:#FFCD61 ;
+    box-shadow: 0px 0px 10px -0.2px #FF742E;
+    position: fixed;
+    z-index: 1000;
+
+}
+
+header img{
+    float: left;
+    width: 200px;
+    margin-left: -20px;
+    -webkit-transition:all .3s ease;
+    -moz-transition:all .3s ease;
+    -o-transition:all .3s ease;
+    transition:all .3s ease;
+}
+
+header nav{
+    float: right;
+    margin-top: 10px;
+    
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+header nav ul li:hover{
+    border-bottom: solid 20px #FF742E;
+}
+
+
+header nav ul li a{
+    color: white;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+
+
+.btnResp{
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin-top: -10px;
+    display: none;
+    cursor: pointer;
+
+}
+
+.btnResp div{
+    width: 100%;
+    height: 10%;
+    background-color: black;
+    margin: 7px 0;
+    cursor: pointer;
+    -webkit-transition:all .3s ease;
+    -moz-transition:all .3s ease;
+    -o-transition:all .3s ease;
+    transition:all .3s ease;
+}
+
+.btnResp div.efecto1{
+    display: none;
+}
+.btnResp div.efecto2{
+    transform: rotate(45deg);
+    margin-top: -11px;
+}
+.btnResp div.efecto3{
+    transform: rotate(-45deg);
+    margin-top: 15px;
+}
+.btnResp div.efecto4{
+    margin-top: 5px;
+}
+
+
+div.menuResp{
+    width: 150px;
+    padding: 50px 5%;
+    background-color: #FFCD61 ;
+    position: absolute;
+    top: 120px;
+    left: -500px;
+    z-index: -1;
+    -webkit-transition:all .3s ease;
+    -moz-transition:all .3s ease;
+    -o-transition:all .3s ease;
+    transition:all .3s ease;
+}
+
+div.efectoMenuResp{
+    left: 0;
+}
+
+div.menuResp ul li{
+    padding: 20px ;
+    -webkit-transition:all .1s ease;
+    -moz-transition:all .1s ease;
+    -o-transition:all .1s ease;
+    transition:all .1s ease;
+    
+}
+
+div.menuResp ul li:hover{
+    border-left: solid 30px #FF742E;
+}
+div.menuResp ul li a{
+    color: white;
+    font-family: 'Fjalla One', sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+@media (max-width:900px){
+    .btnResp{
+        display: block;
+    }
+    header nav ul li{
+        display: none;
+    }
+}
+@media (max-width:550px){
+    header img{
+        width: 100px;
+    }
+}
+/*****************************SLIDER**********************/
+
+div.slider{
+    width: 100%;
+    height: 640px;
+    overflow: hidden;
+    position: relative;
+    background-color: #333333;
+}
+
+div.filtroSlider{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    background: rgba(76,76,76,0);
+    background: -moz-linear-gradient(top, rgba(76,76,76,0) 0%, rgba(76,76,76,0.43) 43%, rgba(19,19,19,0.82) 82%, rgba(19,19,19,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(76,76,76,0)), color-stop(43%, rgba(76,76,76,0.43)), color-stop(82%, rgba(19,19,19,0.82)), color-stop(100%, rgba(19,19,19,1)));
+    background: -webkit-linear-gradient(top, rgba(76,76,76,0) 0%, rgba(76,76,76,0.43) 43%, rgba(19,19,19,0.82) 82%, rgba(19,19,19,1) 100%);
+    background: -o-linear-gradient(top, rgba(76,76,76,0) 0%, rgba(76,76,76,0.43) 43%, rgba(19,19,19,0.82) 82%, rgba(19,19,19,1) 100%);
+    background: -ms-linear-gradient(top, rgba(76,76,76,0) 0%, rgba(76,76,76,0.43) 43%, rgba(19,19,19,0.82) 82%, rgba(19,19,19,1) 100%);
+    background: linear-gradient(to bottom, rgba(76,76,76,0) 0%, rgba(76,76,76,0.43) 43%, rgba(19,19,19,0.82) 82%, rgba(19,19,19,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0 );
+        
+}
+
+div.slider .box-slider{
+    width: 100%;
+    height: 640px;
+    position: absolute;
+    
+}
+
+
+div.slider .imgSlide{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+
+
+
+div.filtroSlider .msj{
+    float: right;
+    margin: 150px 10% 0 0;
+    width: 40%;
+}
+
+
+.msj h3{
+    color: white;
+    font-family: 'Fjalla One', sans-serif;
+    font-size:40px;
+    text-shadow: 2px 2px 3.8px black;
+}
+
+
+.linea{
+    width: 30%;
+    height: 2px;
+    margin: 20px 0;
+    background-color: white;
+}
+
+
+.msj p{
+    color:#ffffff;
+    text-shadow: 2px 2px 3.8px black;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+@media (max-width:900px){
+    div.slider, div.slider .box-slider{
+        height: 450px;
+    }
+    div.filtroSlider .msj{
+        width: 70%;
+        padding: 0 15%;
+    }
+    
+}
+@media (max-width:700px){
+    .msj h3{
+        font-size: 30px;
+    }
+    .msj p{
+        font-size: 18px;
+    }
+}
+@media (max-width:550px){
+    .msj h3{
+        font-size: 25px;
+    }
+    .msj p{
+        font-size: 15px;
+    }
+}
+
+/************************BOX NOSTROS*********/
+
+div.seccion2{
+    position: relative;
+    height: 700px;
+}
+
+div.box-nosotros{
+    width: 70%;
+    padding: 100px 5%;
+    margin: -70px 10%;
+    position: absolute;
+    background-color: #E2A350;
+    box-shadow:0px 0px 10px -0.2px rgba(19,19,19,1);
+    z-index: 150;
+}
+
+
+div.imgNosotros{
+    width: 100%;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+
+div.box-nosotros h3{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 60px;
+    color: #720f0f;
+    float: right;
+    margin-top: -40px;
+    margin-right: 20px;
+    text-shadow: 1px 1px 0.8px #330707;
+    font-weight: 400;
+}
+
+
+.todo{
+    margin-top: 50px;
+}
+
+.todo p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+
+@media (max-width:900px){
+    div.box-nosotros{
+        width: 90%;
+        padding: 100px 5%;
+        margin: 0px 0;
+        position: relative;
+    }
+    div.seccion2{
+        height: auto;
+        overflow: hidden;
+    }
+}
+
+
+/******************FOOTER**************************/
+
+
+footer{
+    
+    width: 100%;
+    padding: 10px 0 20px;
+    background-color: #ef8049;
+    overflow: hidden;
+}
+
+
+
+footer img{
+    width: 100px;
+    margin-top: 150px; 
+    margin-left: 10%;
+    float: left;
+}
+
+footer h3{
+    margin-top: 160px; 
+    margin-left: 5%;
+    float: left;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 22px;
+}
+
+footer div.simContact{
+    float: right;
+    margin-right: 15%;
+    margin-top: 160px;
+    font-size: 25px;
+}
+
+
+footer div.simContact a{
+    color: black;
+}
+
+@media (max-width:1000px){
+    
+    footer img{
+        margin-top: 200px;
+    }
+    footer h3, footer div.simContact{
+        margin-top: 200px;
+    }
+
+}
+
+@media (max-width:900px){
+    
+    footer img{
+        margin-top: 30px;
+        margin-left: 
+    }
+    footer h3, footer div.simContact{
+        margin-top: 45px;
+    }
+
+}
+
+@media (max-width:470px){
+    
+    footer div.simContact{
+        float: left;
+    }
+
+}
+
+/***************Contacto***************/
+
+
+div.contacto{
+    position: fixed;
+    padding: 20px;
+    bottom: 30px;
+    right: 50px;
+    background-color: #ff6200;
+    z-index: 2000;
+    box-shadow: 0px 1px 10px -1.2px #FF742E;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+div.contacto i{
+    font-size: 50px;
+    color: #571a1a;
+}
+
+
+@media (max-width: 900px){
+    div.contacto{
+        display: none;
+    }
+}
+
+div.box-contacto{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-left: -2000px;
+    -webkit-transition:all .3s ease;
+    -moz-transition:all .3s ease;
+    -o-transition:all .3s ease;
+    transition:all .3s ease;
+    
+}
+div.box-efectoContacto{
+    margin-left: 0;
+}
+
+div.filtroContact{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 800;
+    top: 0;
+        
+}
+
+div.formContact{
+    width: 50%;
+    padding: 30px 5%;
+    background-color: white;
+    position: fixed;
+    top: 90px;
+    z-index: 900;
+    margin: 0 20%;
+    box-shadow: 0px 1px 10px -1.2px #3b3b3b;
+}
+
+div.formContact h1{
+    float: right;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+div.formContact h3{
+    font-size: 25px;
+    margin: 50px 0 20px;
+    font-family: 'Fjalla One', sans-serif;
+    color: #4b0707;
+}
+
+div.formContact input{
+    width: 70%;
+    border: 1px solid #FF742E;
+    border-radius: 50px;
+    padding: 10px 5%;
+    margin: 10px 0;
+    outline: none;
+    color: #4b0707;
+}
+
+
+div.formContact label{
+    display: inherit;
+    color: #4b0707;
+    margin: 10px 0 20px;
+    font-weight: bold;
+}
+
+div.formContact textarea{
+    width: 70%;
+    height: 100px;
+    border: 1px solid #FF742E;
+    border-radius: 10px;
+    padding: 10px 5%;
+    margin: 10px 0;
+    outline: none;
+    color: #4b0707;
+}
+
+div.formContact input.btn-enviar{
+    width: 100px;
+    display: inherit;
+}
+
+
+
+@media (max-width: 800px){
+    div.formContact{
+        width: 80%;
+        margin: 0 5%;
+    }
+    div.formContact textarea{
+        height: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
